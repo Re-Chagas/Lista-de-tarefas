@@ -1,55 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="Css/Style.css">
-    <title>Calculadora</title>
+    <title>To-Do-List</title>
 </head>
+
 <body>
-    
+
     <div class="all">
-        <div class="calculator">
-
-            <div class="display">
-                <input id="display" placeholder="0" disabled>
-                <h2 id="history"></h2>
-            </div>
     
-
-            <div class="row-começo">
-                <button class="button purple-text" onclick="limpar()">AC</button>
-                <button class="button gray" onclick="add_operador('/')">/</button>
-            </div>
-    
-            <div class="row">
-                <button class="button" onclick="add_numero(7)">7</button>
-                <button class="button" onclick="add_numero(8)">8</button>
-                <button class="button" onclick="add_numero(9)">9</button>
-                <button class="button gray" onclick="add_operador('*')">*</button>
-            </div>
-    
-            <div class="row">
-                <button class="button" onclick="add_numero(4)">4</button>
-                <button class="button" onclick="add_numero(5)">5</button>
-                <button class="button" onclick="add_numero(6)">6</button>
-                <button class="button gray" onclick="add_operador('-')">-</button>
-            </div>
-    
-            <div class="row">
-                <button class="button" onclick="add_numero(1)">1</button>
-                <button class="button" onclick="add_numero(2)">2</button>
-                <button class="button" onclick="add_numero(3)">3</button>
-                <button class="button gray" onclick="add_operador('+')">+</button>
-            </div>
-    
-            <div class="row-final">
-                <button class="button" onclick="add_numero(0)">0</button>
-                <button class="button" onclick="add_numero('.')">.</button>
-                <button class="button purple" onclick="total()">=</button>
-            </div>
+        <h2>Tarefas Pendentes</h2>
+        <div class="Tpen">
+            <ul id="item"></ul>
         </div>
+        <input type="text" name="" id="resultado" placeholder="Tarefas...">
+        <button type="submit" id="button">Adicionar</button>
+        <h2>Tarefas Finalizadas</h2>
+        <div>
+            <ul id="finalizadas"></ul>
+        </div>
+    </div>
+
 </body>
 
-<script src="----"></script>
+<script src="js/math.js"></script>
+
 </html>
