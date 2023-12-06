@@ -13,7 +13,7 @@ function AdicionarItens() {
 
         selecionados.appendChild(FinButton); 
         selecionados.appendChild(delButton); 
-        document.getElementById("item").appendChild(selecionados); 
+        document.getElementById("tarefinha").appendChild(selecionados); 
         resultado.value = ""
 
         resultado.focus();
@@ -30,7 +30,7 @@ function AdicionarItens() {
 
 function finalizarTarefa(tarefa) {
     tarefa.removeChild(tarefa.childNodes[1]);
-    document.getElementById("finalizadas").appendChild(tarefa);
+    document.getElementById("terminadas").appendChild(tarefa);
 }
 function excluirTarefa(tarefa) {
     tarefa.remove(); 
