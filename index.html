@@ -1,31 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="Css/Style.css">
-    <title>To-Do-List</title>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="Css/Style.css">
+        <title>To-Do-List</title>
+    </head>
 
-<body>
+    <body>
 
-    <div class="all">
-    
-        <h2>Tarefas Pendentes</h2>
-        <div class="Tpen">
-            <ul id="item"></ul>
+        <div class="all">
+            <div class="esquerdo">
+                <h2>Tarefas Pendentes</h2>
+
+                <div class="Tpen">
+                    <ul id="item"></ul>
+                </div>
+            </div>
+            <div class="meio">
+                <div class="meio-meio">
+                    <h2>Adicionar Tarefa</h2>
+                    <input type="text" name id="resultado" placeholder="Adicione alguma tarefa">
+                    <button type="submit" id="button">Adicionar</button>
+                </div>
+            </div>
+            <div class="direito">
+                <h2>Tarefas Finalizadas</h2>
+                <div>
+                    <ul id="finalizadas"></ul>
+                </div>
+            </div>
         </div>
-        <input type="text" name="" id="resultado" placeholder="Tarefas...">
-        <button type="submit" id="button">Adicionar</button>
-        <h2>Tarefas Finalizadas</h2>
-        <div>
-            <ul id="finalizadas"></ul>
-        </div>
-    </div>
 
-</body>
+    </body>
 
-<script src="js/math.js"></script>
+    <script src="js/math.js"></script>
 
 </html>

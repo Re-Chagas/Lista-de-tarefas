@@ -7,20 +7,62 @@
 body{
     width: 100vw;
     height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 .all{
     display: flex;
+    flex-direction: row;
+}
+
+.esquerdo, .meio, .direito{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     flex-direction: column;
+    width: 33.5vw;
+    height: 100vh;
 }
 
-h2{
-    font-size: 50px;
+.esquerdo, .direito{
+    padding-bottom: 110px;
 }
 
-.Tpen{
+.meio-meio{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: antiquewhite;
+}
 
+.meio-meio button{
+    width: 5vw;
+}
+
+
+.esquerdo{
+    background-color: rgb(255, 255, 255);
+    color: rgb(255, 0, 0);
+}
+
+.meio{
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+}
+
+.direito{
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 255, 55);
+}
+
+#resultado{
+    border-radius: 10px;
+    border: 0;
+    height: 30px;
+}
+
+#resultado::placeholder{
+    text-align: center;
 }

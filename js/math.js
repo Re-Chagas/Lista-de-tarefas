@@ -1,32 +1,30 @@
-function addItens() {
+function AdicionarItens() {
     let resultado = document.getElementById("resultado");
         if (resultado.value.trim() !== "") {
         let selecionados = document.createElement("li"); 
         selecionados.innerHTML = resultado.value;
 
-        resultado.focus();
+        let FinButton = document.createElement("button"); 
+        FinButton.innerHTML = "Finalizar";
+        FinButton.className = "FinButton";
 
-        let finalizarBtn = document.createElement("button"); 
-        finalizarBtn.innerHTML = "Finalizar";
-        finalizarBtn.className = "finalizarBtn";
-        finalizarBtn.addEventListener("click", function() {
-            finalizarTarefa(selecionados); 
-        });
+        let  delButton = document.createElement("button"); 
+        delButton.innerHTML = "Excluir"; 
 
-        resultado.focus();
-
-        let excluirBtn = document.createElement("button"); 
-        excluirBtn.innerHTML = "Excluir"; 
-        excluirBtn.addEventListener("click", function() { 
-            excluirTarefa(selecionados); 
-        });
-
-        resultado.focus();
-
-        selecionados.appendChild(finalizarBtn); 
-        selecionados.appendChild(excluirBtn); 
+        selecionados.appendChild(FinButton); 
+        selecionados.appendChild(delButton); 
         document.getElementById("item").appendChild(selecionados); 
         resultado.value = ""
+
+        resultado.focus();
+
+        //addevents
+        FinButton.addEventListener("click", function() {
+            finalizarTarefa(selecionados); 
+        });
+        delButton.addEventListener("click", function() { 
+            excluirTarefa(selecionados); 
+        });
     }
 }
 
@@ -37,9 +35,9 @@ function finalizarTarefa(tarefa) {
 function excluirTarefa(tarefa) {
     tarefa.remove(); 
 }
-document.getElementById("button").addEventListener("click", addItens); 
+document.getElementById("button").addEventListener("click", AdicionarItens); 
 document.addEventListener("keypress", function(event) { 
     if (event.keyCode === 13) { 
-        addItens();
+        AdicionarItens();
     }
 })
